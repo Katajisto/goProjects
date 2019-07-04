@@ -5,7 +5,6 @@ import(
 	"net/http"
 	"log"
 	"os/exec"
-	"io/ioutil"
 )
 
 type textStruct struct {
@@ -23,7 +22,6 @@ func commit(rw http.ResponseWriter, req *http.Request) {
 		err = cmd.Wait()
 		log.Printf("command finished with error: %v", err)
 	
-	
 }
 
 func check(e error) {
@@ -32,32 +30,10 @@ func check(e error) {
 	}
 }
 
-var commands []string
 
 func main() {
-	
-	var port = flag.String("port", "8080", "The port where the webhook is hosted.")
-	var file = flag.String("file", "commands.txt", "The commands seperated with newlines.")
+	var port = flag.String("port", "8800", "The port where the webhook is hosted.")
 	flag.Parse()
-
-	cmdData, err := ioutil.ReadFile(*file)
-	check(err)
-
-	cmds := string(cmdData)
-
-	command := ""
-	
-	for i := 0; i < len(cmds); i++ {
-		if string(cmds[i]) != "\n" {
-			command += string(cmds[i])
-		} else {
-			commands = append(commands, command)
-			command = ""
-		}
-	}
-
 	http.HandleFunc("/hook", commit)
 	log.Fatal(http.ListenAndServe(":"+*port, nil))
-
-	
 }

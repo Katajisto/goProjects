@@ -1,3 +1,4 @@
 #!/bin/bash
 
-mv a b
+git pull
+systemctl restart gitHook
