@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.chooseSide {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  background-color: green;
+}
+
+.shareSide {
+  background-image: url("https://cdn.cnn.com/cnnnext/dam/assets/140420205944-02-stunning-nature---glowing-plankton---restricte.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(42, 173, 27);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessSide {
+  background-image: url("https://www.toronto.ca/wp-content/uploads/2017/11/9186-smart-cities-banner.jpg");
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(115, 21, 153);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkText {
+  color: white;
+  font-family: "Titillium Web", monospace;
+  font-size: 30px;
+}
+
+.submitButton {
+  font-family: 'Anton', monospace;
+  margin-top: 30px;
+  border: white 3px solid;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  padding: 2px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+  border-radius: 100px;
+}
+
+.inputBoxNumber {
+  background: none;
+  font-family: "Ubuntu Monospace", monospace;
+  border: none;
+  border-bottom: rgba(255,255,255,0.5) 2px solid;
+  color: white;
+  width: 300px;
+  font-size: 80px;
+  text-align: center;
+}
+
+.inputBox {
+  background: none;
+  font-family: "Ubuntu Monospace", monospace;
+  border: none;
+  border-bottom: rgba(255,255,255,0.5) 2px solid;
+  color: white;
+  width: 400px;
+  max-width: 80%;
+  font-size: 35px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
+
+.shareCode {
+  color: white;
+  font-size: 40px;
+  font-family: "Ubuntu Monospace", monospace;
+}

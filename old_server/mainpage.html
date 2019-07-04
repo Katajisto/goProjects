@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Portfolio | ENA11</title>
+    <style>
+      body {
+	  font-family: 'Times New Roman', times, serif;
+      }
+      ul {
+	  font-size: 30px;
+	  list-style-type: none;
+	  margin-left: 0;
+	  padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+    <h1>Englannin kirjoituskurssin portfolio</h1>
+    <h3>Tuomas Katajisto 17B</h3>
+    <ul>
+      {{range .Texts}}
+      <center><li><a href="/portfolio/text/?text={{.Title}}">{{.Title}}</a></li></center>
+      {{end}}
+    </ul>
+    <center>
+  </body>
+</html>

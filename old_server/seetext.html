@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{.Title}}</title>
+    <style>
+      .text {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	  white-space: pre-wrap;       /* css-3 */
+	  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	  white-space: -pre-wrap;      /* Opera 4-6 */
+	  white-space: -o-pre-wrap;    /* Opera 7 */
+	  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	  font-family: "Times New Roman", Times, serif;
+	  font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>{{.Title}}</h1></center>
+    <pre class="text">{{.Text}}</pre>
+    <center><a href="../">← Back</a></center>
+    <center><h5>Processing request took: {{.TimeToServe}}</h5></center>
+  </body>
+</html>
