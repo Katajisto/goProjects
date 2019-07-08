@@ -13,7 +13,7 @@ type textStruct struct {
 
 func commit(rw http.ResponseWriter, req *http.Request) {
 	log.Println("Request from: ", req.RemoteAddr)
-		cmd := exec.Command("./onCommit.sh")
+		cmd := exec.Command("./root/goProjects/onCommit.sh")
 		err := cmd.Start()
 		if err != nil {
 		   log.Fatal(err)
