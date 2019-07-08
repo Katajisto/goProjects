@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git pull
-go build
+snap run go build
 systemctl restart gitHook
