@@ -12,5 +12,5 @@ func main() {
 	http.HandleFunc("/", mp.Handle)
 	http.HandleFunc("/portfolio/",portfolio.ServeHome)
 	http.HandleFunc("/portfolio/text/",portfolio.ServePage)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
