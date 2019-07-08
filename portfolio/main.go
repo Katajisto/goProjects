@@ -48,8 +48,8 @@ func init() {
      textSlice = parseTexts()
 	
      //Parse template files into memory. tKatajisto
-     templatePtr = template.Must(template.ParseFiles("portfolio/seetext.html"))
-     mainTemplatePtr = template.Must(template.ParseFiles("portfolio/mainpage.html"))
+     templatePtr = template.Must(template.ParseFiles("/root/goProjects/portfolio/seetext.html"))
+     mainTemplatePtr = template.Must(template.ParseFiles("/root/goProjects/portfolio/mainpage.html"))
 /*	
      http.HandleFunc("/portfolio/text/", servePage)
      http.HandleFunc("/portfolio/", serveHome)
