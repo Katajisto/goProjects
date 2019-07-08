@@ -1,0 +1,3 @@
+module github.com/katajisto/goProjects
+
+go 1.12

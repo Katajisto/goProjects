@@ -1,17 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+	"goProjects/main-page"
+	"goProjects/portfolio"
+	"log"
 )
 
+
 func main() {
-	http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "---- Tuomas Katajisto ----")
-	})
-
-	fs := http.FileServer(http.Dir("static/"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
-
-	http.ListenAndServe(":80", nil)
+	http.HandleFunc("/", mp.Handle)
+	http.HandleFunc("/portfolio/",portfolio.ServeHome)
+	http.HandleFunc("/portfolio/text/",portfolio.ServePage)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

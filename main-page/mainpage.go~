@@ -1,0 +1,5 @@
+package main-page
+
+func Handle(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Tuomas Katajisto")
+}
