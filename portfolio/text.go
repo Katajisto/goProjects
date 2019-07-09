@@ -14,7 +14,7 @@ type text struct {
 
 func parseTexts() []text {
 	var textS []text
-	files, err := ioutil.ReadDir("./root/goProjects/portfolio/texts/")
+	files, err := ioutil.ReadDir("./root/go/src/goProjects/portfolio/texts/")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -25,7 +25,7 @@ func parseTexts() []text {
 			continue
 		}
 		
-		ff, err := os.Open("./root/goProjects/portfolio/texts/"+f.Name())
+		ff, err := os.Open("./root/go/src/goProjects/portfolio/texts/"+f.Name())
 		if err != nil {
 			log.Fatal(err)
 		}
