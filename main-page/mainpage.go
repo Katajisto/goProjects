@@ -6,6 +6,5 @@ import(
 )
 
 func Handle(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "|- Tuomas Katajisto -|")
-	
+	fmt.Fprint(w, "|- Tuomas Katajisto -|")	
 }
